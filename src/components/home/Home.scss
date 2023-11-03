@@ -1,0 +1,14 @@
+@import '../../App.scss';
+
+.home-page {
+  .header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .container {
+    gap: 20px;
+    flex-grow: 1;
+    padding: 20px;
+  }
+}

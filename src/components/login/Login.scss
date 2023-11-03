@@ -1,0 +1,63 @@
+@import '../../App.scss';
+
+.login-page {
+  height: 100vh;
+
+  .container {
+    height: 100vh;
+    gap: 40px;
+    padding: 40px 40px;
+
+    .h1 {
+      line-height: 0.95;
+    }
+
+    .button {
+      gap: 6px;
+
+      .icon {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .circle-container {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0.5;
+
+    .circle {
+      height: 700vw;
+      width: 700vw;
+      position: fixed;
+      border-radius: 100%;
+      border: max(0.7vw, 6px) solid $white;
+      top: 15vh;
+      animation: bob 7s ease-in-out infinite;
+      transform: translateY(100vh);
+      
+      @for $i from 0 through 9 {
+        &:nth-child(#{$i + 1}) {
+          animation-delay: $i * 0.5s - 1.5s;
+          opacity: -1 * abs(0.1 * $i - 0.5) + 0.5;
+        }
+      }
+    }
+  }
+
+  @keyframes bob {
+    0% {
+      transform: translateY(100vh) scaleX(1);
+    }
+    50% {
+      transform: translateY(0) scaleX(0.4);
+    }
+    to {
+      transform: translateY(100vh) scaleX(0.6);
+    }
+  }
+}

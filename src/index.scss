@@ -1,0 +1,133 @@
+@import './App.scss';
+
+:root {
+  color-scheme: light dark;
+  color: $white;
+  background-color: $black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+html {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+.h1 {
+  font-size: max(5rem, 8vw);
+}
+
+.h2 {
+  font-size: max(4rem, 6vw);
+}
+
+.h3 {
+  font-size: max(3rem, 4vw);
+}
+
+.h4 {
+  font-size: max(2rem, 2vw);
+}
+
+.h5 {
+  font-size: max(1.5rem, 1.5vw);
+}
+
+.h6 {
+  font-size: max(1.25rem, 1.25vw);
+}
+
+.p {
+  line-height: 1.15;
+}
+
+.small {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.button {
+  color: $white;
+  text-decoration: none;
+  padding: 0.8em 1.6em;
+  cursor: pointer;
+  text-align: center;
+  transition-duration: .3s;
+  background-color: rgba($white, 0.1);
+  border-radius: 100vw;
+  backdrop-filter: blur(1rem);
+  &:hover {
+    background-color: rgba($white, 0.2);
+  }
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: $white;
+  padding: 0.1em 0;
+  border-bottom-width: 0.15em;
+  border-bottom-style: solid;
+}
+
+.centered {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-start {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: $black;
+    background-color: $white;
+  }
+}
